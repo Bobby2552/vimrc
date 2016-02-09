@@ -147,7 +147,8 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme vim-colors-solarized
+
 catch
 endtry
 
@@ -253,6 +254,9 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+nmap ; :
+imap ' <Esc>
 
 " Specify the behavior when switching between buffers 
 try
