@@ -229,6 +229,9 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Exit Vim
+nmap <leader>q :wq<cr>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
 
@@ -256,7 +259,6 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 nmap ; :
-imap ' <Esc>
 
 " Specify the behavior when switching between buffers 
 try
@@ -362,9 +364,6 @@ map <leader>s? z=
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
-
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>
 
@@ -433,3 +432,7 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+:filetype indent on
+:set filetype=html           
+:set smartindent  
